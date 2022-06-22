@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "bdd": "CUSTOM_ENV_FILE=.env.test NODE_ENV=test ./node_modules/.bin/codeceptjs run",
+    "bdd:appium": "yarn bdd -c codecept.appium-conf.js"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
@@ -45,13 +47,16 @@
     "@typescript-eslint/parser": "^5.17.0",
     "babel-jest": "^28.1.1",
     "babel-plugin-module-resolver": "^4.1.0",
+    "codeceptjs": "^3.3.3",
     "eslint": "^8.18.0",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
     "metro-react-native-babel-preset": "^0.71.1",
     "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "^18.2.0",
-    "typescript": "^4.7.4"
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4",
+    "webdriverio": "^6.12.1"
   },
   "resolutions": {
     "@types/react": "^17"
